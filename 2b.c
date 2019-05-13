@@ -2,9 +2,7 @@
 #include<GL/glut.h>
 #include<GL/glu.h>
 #include<GL/gl.h>
-GLfloat tri[3][3]={{200,200,0},{400,200,0},{300,400,0}};
-GLfloat arb_x=200;
-GLfloat arb_y=200;
+GLfloat tri[3][3]={{0,0,0},{300,0,0},{150,300,0}};
 GLfloat rot_angle;
 void drawtri()
 {
@@ -19,9 +17,7 @@ void display()
 glClear(GL_COLOR_BUFFER_BIT);
 glMatrixMode(GL_MODELVIEW);
 glLoadIdentity();
-glTranslatef(arb_x,arb_y,0.0);
 glRotatef(rot_angle,0.0,0.0,1.0);
-glTranslatef(-arb_x,-arb_y,0.0);
 glColor3f(0,1,0);
 drawtri();
 glMatrixMode(GL_MODELVIEW);
